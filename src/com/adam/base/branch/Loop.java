@@ -16,6 +16,7 @@ public class Loop {
                 //代码块
            }当Boolean表达式结果为true时执行代码块，否则代码不会被执行
          */
+
         // 创建一个Scanner对象
         Scanner sc = new Scanner(System.in);
         // 获取输入
