@@ -1,4 +1,4 @@
-package com.adam.base.task0815;
+package com.adam.base.task.task0815;
 
 /**
  * {class description}
