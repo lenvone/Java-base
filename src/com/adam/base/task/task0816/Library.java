@@ -6,7 +6,6 @@ public class Library {
 
     /*
         对象数组
-        TODO( 如果我要存第 11 本书怎么办？ 扩容？)
         如果一个个扩容，效率太低了。高效的扩容方式
      */
     private Book[] books = new Book[10];
