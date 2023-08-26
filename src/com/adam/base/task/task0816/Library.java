@@ -1,4 +1,4 @@
-package com.adam.base.task0816;
+package com.adam.base.task.task0816;
 
 import java.util.Arrays;
 
@@ -29,7 +29,6 @@ public class Library {
         }
         books[count++] = book;
     }
-
     private void grow() {
         // 用一个新数组将原来数组元素 copy 过去,  2n
 //        Book[] newArr = new Book[books.length * 2];
@@ -61,6 +60,4 @@ public class Library {
         }
         return null;
     }
-
-
 }
