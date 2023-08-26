@@ -21,7 +21,7 @@ public class LuckNum {
 
         outer:for (int i = 0; i <arr.length; i++) {
             int num = rand.nextInt(40)+ 1;
-            for (int j = 0;j< i;j++){
+            for (int j = 0;j < i;j++){
                 if (num == arr[j]){
                     i--;
                     continue outer;
