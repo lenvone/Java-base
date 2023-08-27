@@ -37,7 +37,7 @@ public class Email {
         }else {
             //  .com 结尾，且@ 和.com之间必须有其他字符
             if (email.endsWith(".com") &&
-                    (email.substring( a+ 1, b).length() == 0)){
+                    (email.substring( a + 1, b).length() == 0)){
                 return true;
             }
         }
