@@ -1,4 +1,4 @@
-package com.adam.base.task;
+package com.adam.base.task.Task0802;
 
 import java.util.Scanner;
 
