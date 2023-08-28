@@ -1,4 +1,4 @@
-package com.adam.base.practice.Movie;
+package com.adam.base.practice.Movie02;
 
 import com.adam.base.task.Task0822.Marry;
 

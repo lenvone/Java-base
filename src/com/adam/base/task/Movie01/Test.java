@@ -1,4 +1,4 @@
-package com.adam.base.task.Movie;
+package com.adam.base.task.Movie01;
 
 /**
  * {class description}

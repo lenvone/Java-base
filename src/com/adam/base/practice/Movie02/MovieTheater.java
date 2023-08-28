@@ -1,4 +1,4 @@
-package com.adam.base.practice.Movie;
+package com.adam.base.practice.Movie02;
 
 import java.util.Scanner;
 
@@ -101,9 +101,7 @@ public class MovieTheater {
             print("手机号已注册");
             // TODO()
 
-            return;
-        }
-        String password = null;
+            return;}String password = null;
         String rePass = null;
         do{
             if (password != null){
@@ -402,7 +400,6 @@ public class MovieTheater {
     public void print(Object msg){
         System.out.println(msg);
     }
-
 
     public String toString(){
         return name + "现有电影 " + movieCount + " 部， 用户 " + userCount + " 人";

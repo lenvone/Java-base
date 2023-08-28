@@ -1,4 +1,4 @@
-package com.adam.base.Movie;
+package com.adam.base.Movie03;
 
 public class Student {
 
@@ -29,7 +29,6 @@ public class Student {
 
             // 名字和年龄一样就是同一个 student  getClass / instanceof
 //            if (obj.getClass() == this.getClass()){
-//
 //            }
             if (obj instanceof Student stu){
                 if (stu.name.equals(this.name)){

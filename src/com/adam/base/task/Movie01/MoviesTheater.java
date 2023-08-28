@@ -1,4 +1,4 @@
-package com.adam.base.task.Movie;
+package com.adam.base.task.Movie01;
 
 import java.util.Scanner;
 
@@ -55,7 +55,7 @@ public class MoviesTheater {
     }
 
     public static void showMenu() {
-        System.out.println("请选择功能：");
+        System.out.println("欢迎使用"+ name +"请选择功能：");
         System.out.println("1. 查询电影信息");
         System.out.println("2. 显示所有电影信息");
         System.out.println("3. 管理员登录");
@@ -136,8 +136,7 @@ public class MoviesTheater {
         String phone = sc.next();
         System.out.print("请输入用户密码：");
         String password = sc.next();
-        System.out.println("请选择用户身份（1. 管理员 2. 普通用户）：");
-        int role = sc.nextInt();
+
 
 //        isAdmin(phone,password);
         UserLogin(phone,password);
@@ -249,6 +248,7 @@ public class MoviesTheater {
 
         System.out.println("请选择功能：");
         int userNum = sc.nextInt();
+        userMenu(userNum);
     }
 
     public static void userMenu(int userNum){

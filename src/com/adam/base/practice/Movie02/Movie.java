@@ -1,4 +1,6 @@
-package com.adam.base.practice.Movie;
+package com.adam.base.practice.Movie02;
+
+import java.util.Objects;
 
 /**
  * 电影类
@@ -79,6 +81,19 @@ public class Movie {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Movie movie = (Movie) o;
+        return date == movie.date && ticketCount == movie.ticketCount && Objects.equals(name, movie.name) && Objects.equals(price, movie.price) && Objects.equals(director, movie.director);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price, director, date, ticketCount);
+    }
+
+    @Override
     public String toString() {
         return "电影名：'" + name + '\'' +
                 ", 导演：'" + director + '\'' +
@@ -86,4 +101,5 @@ public class Movie {
                 ", 价格：" + price +
                 ", 数量： " + ticketCount;
     }
+
 }

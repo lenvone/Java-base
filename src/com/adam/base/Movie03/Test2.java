@@ -1,4 +1,4 @@
-package com.adam.base.Movie;
+package com.adam.base.Movie03;
 
 /*
 instence 和 getClass

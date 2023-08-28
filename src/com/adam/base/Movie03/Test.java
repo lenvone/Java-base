@@ -1,4 +1,4 @@
-package com.adam.base.Movie;
+package com.adam.base.Movie03;
 
 public class Test {
         public static void main(String[] args) {

@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @versionn 1.0.0
  * @date 2023/8/18
  */
-public class Main {
+public class LibraryTest {
 
         static Scanner input = new Scanner(System.in);
 

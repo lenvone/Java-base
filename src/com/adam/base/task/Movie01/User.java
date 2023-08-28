@@ -1,4 +1,4 @@
-package com.adam.base.task.Movie;
+package com.adam.base.task.Movie01;
 
 /**
  * {class description}
@@ -46,9 +46,6 @@ public class User {
     }
 
     public int getRole() {
-        if (role == 1){
-        }else if (role == 2){
-        }
         return role;
     }
     public void setRole(int role) {

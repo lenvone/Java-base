@@ -1,4 +1,4 @@
-package com.adam.base.practice.Movie;
+package com.adam.base.practice.Movie02;
 
 /**
  * 用户类
