@@ -1,6 +1,6 @@
 package com.adam.base.practice.Movie02;
 
-import com.adam.base.task.Task0822.Marry;
+import com.adam.base.Task.Task0822.Marry;
 
 public class Test {
 

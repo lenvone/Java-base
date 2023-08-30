@@ -1,4 +1,4 @@
-package com.adam.base.String;
+package com.adam.base.string;
 
 public class StringB {
 
@@ -23,7 +23,7 @@ public class StringB {
 
             num = 200; // new Integer()
             num1 = 200; // new Integer();
-            System.out.println(num == num1);
+            // System.out.println(num == num1);
 
             // Byte  Short Character(0~127)  Integer Long 都有缓存对象数组
             Character c = '(';

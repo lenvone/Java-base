@@ -1,4 +1,4 @@
-package com.adam.base.String;
+package com.adam.base.string;
 
 import java.util.Arrays;
 

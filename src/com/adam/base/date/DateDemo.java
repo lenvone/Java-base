@@ -1,4 +1,4 @@
-package com.adam.base.Date;
+package com.adam.base.date;
 
 import java.util.Date;
 
