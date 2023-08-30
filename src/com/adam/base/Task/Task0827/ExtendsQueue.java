@@ -46,7 +46,7 @@ public class ExtendsQueue extends Queue{
 
         int oldCapacity = queue.length;
         int newCapacity = oldCapacity << 2;
-// int newcapacity = oldCapacity + 10;  -- 定长扩容
+// int newcapacity = oldCapacity + 10;  -- 定长 扩容
         // 确认新容量大于旧容量
         if (newCapacity > oldCapacity){
             newCapacity = Integer.MAX_VALUE;
