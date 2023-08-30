@@ -1,4 +1,4 @@
-package com.adam.base.Movie03;
+package com.adam.base.Movie;
 
 import java.util.Scanner;
 

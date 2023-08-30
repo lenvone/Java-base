@@ -1,4 +1,4 @@
-package com.adam.base.String;
+package com.adam.base.string;
 
 public class Demo07 {
         public static void main(String[] args) {

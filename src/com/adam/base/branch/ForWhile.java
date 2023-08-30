@@ -7,6 +7,7 @@ package com.adam.base.branch;
  * @versionn 1.0.0
  * @date 2023/8/3
  */
+
 public class ForWhile {
     public static void main(String[] args) {
       int i = 9;
