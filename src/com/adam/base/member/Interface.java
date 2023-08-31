@@ -26,7 +26,7 @@ public class Interface {
         };
 
         // 函数接口，某一种功能
-//        Charge charge = new Charge() {
+//        Charge charge = new Charge(){
 //            @Override
 //            public void charge(int b){
 //                System.out.println(b);

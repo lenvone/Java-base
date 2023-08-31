@@ -21,7 +21,7 @@ public interface USB extends IA,IB{
     /**
      * 默认方法
      * 默认实现
-     *
+     *非abstra类，可以在父类中实现，子类可以不用重写default方法
      */
     public default void a(){
         System.out.println("实现A方法");
