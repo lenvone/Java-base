@@ -1,14 +1,12 @@
 package com.adam.base.practice;
 
-import com.sun.source.tree.WhileLoopTree;
-
 /**
  * {class description}
  *
  * @author wyh
  * @date 2023/8/3
  */
-public class ad {
+public class QuickSort {
     public static void main(String[] args) {
         int[] arr = new int[]{2,4,1,6,9,3};
         drom(arr,0,arr.length - 1);
@@ -46,3 +44,4 @@ public class ad {
     }
 
 }
+
