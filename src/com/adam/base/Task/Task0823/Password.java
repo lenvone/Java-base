@@ -20,26 +20,26 @@ public class Password {
         String str = "";
 
         int n = rand.nextInt(65,122);
-        if (n>=65&&n<=90 || n>=97&&n<=122){
+        if (n >= 65 && n <= 90 || n >= 97&& n<= 122){
             char ch = (char)n;
-            str = str+ch;
+            str = str + ch;
         }
-        outer:for (int i = 0; i < 5; i++) {
+        outer:for (int i = 0; i < 5; i ++) {
             n = rand.nextInt(48,112);
             int[] arr = new int[5];
             for (int j = 0; j < i; j++) {
-                if (arr[j]==n){
-                    i--;
+                if (arr[j] == n){
+                    i --;
                     continue outer;
                 }
             }
 
-            arr[i]=n;
-            if (n>=48 && n<=57 || n>=65&&n<=90 || n>=97&&n<=122){
+            arr[i] = n;
+            if (n >= 48 && n <= 57 || n >= 65 && n <= 90 || n >= 97 && n<= 122){
                 char ch = (char)n;
-                str = str+ch;
+                str = str + ch;
             }else {
-                i--;
+                i --;
             }
         }
         System.out.println(str);
