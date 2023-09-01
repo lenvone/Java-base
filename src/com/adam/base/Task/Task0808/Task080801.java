@@ -18,7 +18,7 @@ public class Task080801 {
         排名 成绩
         1 xxx
         2 xxx
-        3 xxx
+        3 xxx‘
          */
         int[] scores = new int[10];
         Scanner input = new Scanner(System.in);
