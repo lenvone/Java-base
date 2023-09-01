@@ -1,5 +1,8 @@
 package com.adam.base.member;
 
+/**
+ * @author 33812
+ */
 /*
     外部类和内部类
  */
