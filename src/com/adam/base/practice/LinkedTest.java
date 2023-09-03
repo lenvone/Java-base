@@ -34,6 +34,8 @@ public class LinkedTest {
         System.out.println(linked.set(2,"5"));  // Linked[null, b, 5, d]
         System.out.println(linked);
 
+        System.out.println(Arrays.toString(linked.toArray())); // TODO
+
         System.out.println(linked.lastIndexOf("null"));  // TODO
 
         linked.clear();

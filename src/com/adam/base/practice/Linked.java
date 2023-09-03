@@ -18,12 +18,54 @@ public class Linked implements List {
         第一个元素
      */
     private Node first;
-
     /*
     元素个数
      */
     private int size;
+    /**
+     * 链表中的 节点对象
+     */
+    private class Node {
+        /*
+            元素的值
+         */
+        private Object value;
 
+        /**
+         * 下一个 节点
+         */
+        private Node next;
+
+        public Node(Object value, Node next) {
+            this.value = value;
+            this.next = next;
+        }
+
+        /**
+         * 判断 node 节点是否一样
+         *  node 的值是否一样
+         * @param obj
+         * @return
+         */
+        @Override
+        public boolean equals(Object obj){
+
+            if (obj == null){
+                return false;
+            }
+            if (obj == this){
+                return true;
+            }
+            if (obj instanceof Node node){
+                if (this.value == null){
+                    return node.value == null;
+                } else {
+                    return value.equals(node.value);
+                }
+            }
+            return false;
+        }
+    }
 
     @Override
     public int size() {
@@ -346,51 +388,6 @@ public class Linked implements List {
             return sb.toString();
         }
 
-    }
-
-    /**
-     * 链表中的 节点对象
-     */
-    private class Node {
-        /*
-            元素的值
-         */
-        private Object value;
-
-        /**
-         * 下一个 节点
-         */
-        private Node next;
-
-        public Node(Object value, Node next) {
-            this.value = value;
-            this.next = next;
-        }
-
-        /**
-         * 判断 node 节点是否一样
-         *  node 的值是否一样
-         * @param obj
-         * @return
-         */
-        @Override
-        public boolean equals(Object obj){
-
-            if (obj == null){
-                return false;
-            }
-            if (obj == this){
-                return true;
-            }
-            if (obj instanceof Node node){
-                if (this.value == null){
-                    return node.value == null;
-                } else {
-                    return value.equals(node.value);
-                }
-            }
-            return false;
-        }
     }
 
     private class LinkedIndexOutOfBoundsException extends Throwable {
