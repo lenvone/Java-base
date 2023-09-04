@@ -1,7 +1,5 @@
 package com.adam.base.practice;
 
-import org.w3c.dom.Node;
-
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -13,6 +11,7 @@ import java.util.ListIterator;
  * @author wyh
  * @date 2023/8/27
  */
+
 public class DoubleLinked implements List {
 
     private int size;  // 节点数量
@@ -22,15 +21,24 @@ public class DoubleLinked implements List {
     private class Node{
 
         private Node prev;   // 前一个节点
-        private Node value;  // 值
+        private Object value;  // 值
         private Node next;  // 后一个节点
 
-        public Node(Node prev, Node value, Node next) {
+        public Node(Node prev, Object value, Node next) {
             this.prev = prev;
             this.value = value;
             this.next = next;
         }
+
+        private boolean valueEquals(Object value){
+            if (this.value == null){
+                return this.value == value;
+            }else {
+                return this.value.equals(value);
+            }
+        }
     }
+
 
     @Override
     public int size() {
@@ -44,26 +52,76 @@ public class DoubleLinked implements List {
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        Object[] objects = new Object[size];
+        Node current = first;
+        int index = 0;
+
+        while (current != null){
+            objects[index ++] = current.value;
+            current = current.next;
+        }
+        return objects;
     }
 
     @Override
     public boolean add(Object o) {
-        return false;
+        Node current = new Node(null,o,null);
+        if (first == null){
+            first = current;
+        }else {
+           last.next =current;
+        }
+        last = current;
+        size ++;
+        return true;
     }
+
+
 
     @Override
     public boolean remove(Object o) {
-        return false;
+        if (first.valueEquals(o)){
+
+            // 删除头节点
+            Node old = first;
+            first.next.prev = null;
+            old.next = null;
+        }else{
+            Node current = first;
+            while (current != null && !current.valueEquals(o)){
+                current = current.next;
+            }
+
+            if (current != null){  // 删除元素
+                if (last == current){  // 是否是删除最后一个元素
+                    // 如果是
+                    last = current.prev;
+
+                    current.prev.next = null;
+                    current.prev = null;
+                }else{
+                    // 如果不是(中间元素)
+                    current.prev.next = current.next;
+                    current.next.prev = current.prev;
+
+                    current.prev = null;
+                    current.next = null;
+                }
+            }
+        }
+        size -- ;
+        return true;
     }
 
     @Override
     public void clear() {
-
+        first = null;
+        size = 0;
     }
 
     @Override
     public Object get(int index) {
+
         return null;
     }
 
@@ -74,17 +132,60 @@ public class DoubleLinked implements List {
 
     @Override
     public void add(int index, Object element) {
-
+        if (index == size){
+            add(element);
+        }
     }
 
     @Override
     public Object remove(int index) {
-        return null;
+        if (index < 0 || index > size + 1){
+            return "没找到";
+        }
+
+        // 如果要移除的是头节点
+        if (index == 0){
+            if (first == last){
+
+                last = null;
+
+            }
+            Node current = first;
+            first.next.prev = null;
+            current.next = null;
+            size -- ;
+            return current.value;
+        }else{
+            Node old = getNode(index - 1);
+            old.prev.next = old.next;
+            old.next.prev = old.prev;
+            old.next = null;
+            old.prev = null;
+            size --;
+            return old.value;
+        }
+
+    }
+
+    private Node getNode(int index) {
+        Node current = first;
+        for (int i = 0; i < size; i++) {
+            current = current.next;
+        }
+        return current;
     }
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        Node current = first;
+
+        for (int i = 0; i < size; i++) {
+            if (current.valueEquals(o)){
+                return i;
+            }
+            current = current.next;
+        }
+        return -1;
     }
 
     @Override
@@ -102,7 +203,22 @@ public class DoubleLinked implements List {
         return new Object[0];
     }
 
-// ------------------------------------------------------------------->>>>>>
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("{");
+        Node current = first;
+       while (current != null){
+           sb.append(current.value);
+           if (current.next != null){
+               sb.append(",");
+           }
+           current = current.next;
+       }
+        sb.append("}");
+       return sb.toString();
+    }
+
+    // ------------------------------------------------------------------->>>>>>
 
     @Override
     public boolean contains(Object o) {
@@ -148,6 +264,4 @@ public class DoubleLinked implements List {
     public boolean containsAll(Collection c) {
         return false;
     }
-
-
 }
